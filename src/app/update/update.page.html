@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Update User</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content>
+    <ion-list lines="full">
+      <form [formGroup]="updateprojectFg" (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label >Project ID</ion-label>
+          <ion-input formControlName="project_id" type="text" required></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Project Name</ion-label>
+          <ion-input formControlName="name" type="text" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label >Start Date</ion-label>
+          <ion-input formControlName="start_date" type="Date" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label >End Date</ion-label>
+          <ion-input formControlName="end_date" type="Date" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label >Project Leader</ion-label>
+          <ion-input formControlName="leader" type="text" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Project Accountant</ion-label>
+          <ion-input formControlName="accountant" type="text" required>
+          </ion-input>
+        </ion-item>   
+        <ion-item>
+          <ion-label >Reporting Requirements</ion-label>
+          <ion-input formControlName="report" type="text" required>
+          </ion-input>
+        </ion-item>
+      
+        
+      </form>
+    </ion-list>
+  </ion-content>
+</ion-content>

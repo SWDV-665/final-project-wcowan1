@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title position ="floating" >Create Project</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!---Create form for user input of project info-->
+<ion-list>
+  <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label  position="floating">Project ID</ion-label>
+      <ion-input formControlName="project_id" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Project Name</ion-label>
+      <ion-input formControlName="name" type="text" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Start Date</ion-label>
+      <ion-input formControlName="start_date" type="Date" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >End Date</ion-label>
+      <ion-input formControlName="end_date" type="Date" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Project Leader</ion-label>
+      <ion-input formControlName="leader" type="text" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Project Accountant</ion-label>
+      <ion-input formControlName="accountant" type="text" required>
+      </ion-input>
+    </ion-item>   
+    <ion-item>
+      <ion-label position="floating" >Reporting Requirements</ion-label>
+      <ion-input formControlName="report" type="text" required>
+ 
+      </ion-input>
+    </ion-item>
+
+   
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" expand="block">Create Project</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-list>
+</ion-content>
+

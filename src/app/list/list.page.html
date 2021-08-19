@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Project List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let project of Project">
+      <ion-label >
+        <h2 position="floating">{{project.project_id}}</h2>
+        <h3 position="floating">{{project.name}}</h3>
+        <h3 position="floating">{{project.start_date}}</h3>
+        <h3 position="floating">{{project.end_date}}</h3>
+        <h3 position="floating">{{project.leader}}</h3>
+        <h3 position="floating">{{project.accountant}}</h3>
+        <h3 position="floating">{{project.report}}</h3>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/update/', project._id]">
+          <ion-icon name="create" expand="block"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
